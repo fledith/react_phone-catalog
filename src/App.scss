@@ -1,1 +1,49 @@
-// not empty
+@import "styles/variables";
+@import "styles/typography";
+@import "styles/extends";
+
+.App {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 64px 64px;
+    align-items: center;
+
+    height: $header-height;
+
+    box-shadow: 0 1px 0 $c_elements;
+
+    &--left {
+      display: flex;
+      align-items: center;
+      gap: $header-gap;
+    }
+
+    &--right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      box-shadow: -1px 0 0 $c_elements;
+    }
+  }
+
+  &__logo {
+    padding-left: 24px;
+  }
+
+  &__header-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    &--active {
+      @extend %activeLink;
+    }
+  }
+}

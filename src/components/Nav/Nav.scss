@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/typography";
+@import "../../styles/extends";
+
+.nav {
+  &__list {
+    display: flex;
+    gap: $header-gap;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    @extend %uppercase;
+    color: $c_secondary;
+
+    height: $header-height;
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: $c_primary;
+    }
+
+    &--active {
+      @extend %activeLink;
+    }
+  }
+}

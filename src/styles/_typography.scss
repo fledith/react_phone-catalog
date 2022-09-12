@@ -1,0 +1,47 @@
+%h1 {
+  font-family: "Mont-Bold", sans-serif;
+  font-weight: 700;
+  font-size: $fs_main-title;
+  line-height: 41px;
+  letter-spacing: -0.01em;
+}
+
+%h2 {
+  font-family: "Mont-Bold", sans-serif;
+  font-weight: 700;
+  font-size: $fs_title;
+  line-height: 31px;
+}
+
+%h3 {
+  font-family: "Mont-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: $fs_sub-title;
+  line-height: 26px;
+}
+
+%uppercase {
+  font-family: "Mont-Bold", sans-serif;
+  font-weight: 700;
+  font-size: $fs_small-text;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+%body-text {
+  font-family: "Mont-Regular", sans-serif;
+  font-weight: 400;
+  font-size: $fs_body-text;
+  line-height: 21px;
+}
+
+%buttons {
+  @extend %body-text;
+}
+
+%small-text {
+  font-family: "Mont-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: $fs_small-text;
+  line-height: 15px;
+}

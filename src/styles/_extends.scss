@@ -1,0 +1,15 @@
+// active header link
+%activeLink {
+  position: relative;
+  color: $c_primary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: $c_primary;
+  }
+}
