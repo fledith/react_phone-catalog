@@ -1,19 +1,18 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Logo } from '../Logo/Logo';
 import { Nav } from '../Nav';
 import { CustomNavLink } from '../CustomeNavLink';
+import heart from '../../img/icons/heart.svg';
+import cart from '../../img/icons/cart.svg';
 
+/* eslint-disable max-len */
 export const Layout = () => {
   return (
     <div className="App">
       <header className="App__header">
         <div className="App__header--left">
           <div className="App__logo">
-            <Link to="/" className="App__logo-link">
-              <img
-                src={`${window.location.origin}/img/logo.svg`}
-                alt="LOGO"
-              />
-            </Link>
+            <Logo />
           </div>
 
           <div className="App__nav">
@@ -27,7 +26,10 @@ export const Layout = () => {
             activeClass="App__header-link--active"
             defaultClass="App__header-link"
           >
-            <img src={`${window.location.origin}/img/icons/heart.svg`} alt="heart" />
+            <>
+              <div className="App__header-counter">1</div>
+              <img src={heart} alt="heart" />
+            </>
           </CustomNavLink>
         </div>
 
@@ -37,7 +39,10 @@ export const Layout = () => {
             activeClass="App__header-link--active"
             defaultClass="App__header-link"
           >
-            <img src={`${window.location.origin}/img/icons/cart.svg`} alt="cart" />
+            <>
+              <div className="App__header-counter">2</div>
+              <img src={cart} alt="cart" />
+            </>
           </CustomNavLink>
         </div>
       </header>
@@ -46,7 +51,34 @@ export const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="App__footer">Footer</footer>
+      <footer className="App__footer">
+        <Logo />
+        <nav className="App__footer-nav">
+          <ul className="App__footer-list">
+            <li className="App__footer-item">
+              <a
+                href="https://github.com/fledith/react_phone-catalog/tree/develop"
+                className="App__footer-link"
+              >
+                Github
+              </a>
+            </li>
+
+            <li className="App__footer-item">
+              <a href="#contacts" className="App__footer-link">Contacts</a>
+            </li>
+
+            <li className="App__footer-item">
+              <a href="#rights" className="App__footer-link">Rights</a>
+            </li>
+          </ul>
+        </nav>
+        <div className="App__footer-back">
+          Back to top
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="#" className="App__footer-back-btn">{'>'}</a>
+        </div>
+      </footer>
     </div>
   );
 };

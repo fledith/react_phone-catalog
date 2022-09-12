@@ -4,3 +4,7 @@
 @import "styles/typography";
 @import "styles/extends";
 @import "styles/mixins";
+
+html {
+  scroll-behavior: smooth;
+}
