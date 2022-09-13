@@ -1,0 +1,8 @@
+// margin/padding and sizes
+$header-height: 64px;
+$desktop-gap: 64px;
+$footer-height: 96px;
+$footer-back-width: 115px;
+$footer-back-gap: 16px;
+
+$main-height: calc(100vh - #{$header-height} - #{$footer-height});
